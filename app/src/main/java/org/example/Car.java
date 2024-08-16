@@ -1,12 +1,14 @@
+package org.example;
+
 public class Car {
     final int cost;
     final int mileage;
-    public Car(int price, int mileage) {
+    public Car(int price, int miles) {
         cost = price;
-        super.mileage = mileage;
+        mileage = miles;
     }
     // get resell price (inaccurate, this is a test project)
-    public int sellPrice() 
+    public double sellPrice() 
     {
         return cost - (0.2 * mileage);
     }

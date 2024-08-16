@@ -3,12 +3,42 @@
  */
 
 package org.example;
-import org.example.Car;
+import java.util.Scanner;
+import org.example.*;
 
-
+@SuppressWarnings("unused")
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         System.out.println("Welcome to Car Resale");
-        
+        String ans = ask("Do you want to sell your car ? Y, n");
+        switch(ans) {
+            case "Y":
+            break;
+            case "n":
+            System.exit(0);
+        }
+        ans = ask("Give your car mileage");
+        int mileage = Integer.parseInt(ans);
+        ans = ask("Give your car price");
+        int price = Integer.parseInt(ans);
+        Car car = new Car(price, mileage);
+        System.out.println("Confirm details:\nMileage: "+ car.mileage() + "\nPrice: " + car.price());
+        ans = ask("Y, n");
+        switch(ans) {
+            case "Y":
+            break;
+            case "n":
+            System.exit(0);
+        }
+        System.out.println("Sell price: " + car.sellPrice());
+        System.exit(0);
+    }
+    @SuppressWarnings("resource")
+    private static String ask(String q) 
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println(q);
+        return scan.nextLine();
     }
 }
