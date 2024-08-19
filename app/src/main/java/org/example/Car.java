@@ -8,7 +8,7 @@ public class Car {
         mileage = miles;
     }
     // get resell price (inaccurate, this is a test project)
-    public double sellPrice() 
+    public double sellPrice()  
     {
         return cost - (0.2 * mileage);
     }
