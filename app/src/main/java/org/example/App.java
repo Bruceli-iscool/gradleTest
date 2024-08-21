@@ -32,7 +32,7 @@ public class App {
             System.exit(0);
         }
         System.out.println("Sell price: " + car.sellPrice());
-        System.exit(0);
+     
     }
     @SuppressWarnings("resource")
     private static String ask(String q) 
