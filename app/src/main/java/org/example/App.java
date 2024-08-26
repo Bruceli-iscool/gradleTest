@@ -11,6 +11,16 @@ public class App {
     public static void main(String[] args) 
     {
         System.out.println("Welcome to Car Resale");
+        
+    }
+    @SuppressWarnings("resource")
+    private static String ask(String q) 
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println(q);
+        return scan.nextLine();
+    }
+    private static void sell() {
         String ans = ask("Do you want to sell your car ? Y, n");
         switch(ans) {
             case "Y":
@@ -33,12 +43,6 @@ public class App {
         }
         System.out.println("Sell price: " + car.sellPrice());
      
-    }
-    @SuppressWarnings("resource")
-    private static String ask(String q) 
-    {
-        Scanner scan = new Scanner(System.in);
-        System.out.println(q);
-        return scan.nextLine();
+    
     }
 }
